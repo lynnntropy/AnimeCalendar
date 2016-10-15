@@ -1,25 +1,20 @@
-package rs.veselinromic.scrape;
+package rs.veselinromic.provider;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import rs.veselinromic.model.ScheduleItem;
 
 import java.io.IOException;
-import java.sql.Time;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class Crunchyroll implements Scraper
+public class Crunchyroll implements Provider
 {
     @Override
-    public List<ScheduleItem> scrape() throws IOException
+    public List<ScheduleItem> retrieveSchedule() throws IOException
     {
         List<ScheduleItem> scheduleItems = new ArrayList<>();
 
